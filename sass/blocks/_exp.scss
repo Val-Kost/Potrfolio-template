@@ -1,0 +1,128 @@
+.exp {
+    padding-top: 120px;
+
+    @media (max-width: 649px) {
+        padding-top: 40px;
+    }
+
+    &__subtitle {
+        text-align: center;
+        @include subtitle;
+        @include circle-label;
+
+        &:before {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__title {
+        @include title;
+        text-align: center;
+        line-height: 60px;
+    }
+
+    &__divider {
+        @include short-line;
+        margin: 15px auto 0px auto;
+    }
+
+    &-wrapper {
+        padding: 60px 65px 0 65px;
+        display: grid;
+        grid-template: minmax(320px, auto) / repeat(auto-fill, minmax(310px, 425px));
+        justify-content: center;
+        gap: 0px 135px;
+
+        @media (max-width: 1114px) {
+            padding: 60px 0px 0 0px;
+            gap: 0px 115px;
+        }
+
+        @media (max-width: 320px) {
+            grid-template: minmax(320px, auto) / repeat(auto-fill, 310px);
+        }
+
+        &__title {
+            position: relative;
+            margin-bottom: 45px;
+            align-self: flex-start;
+            text-align: center;
+            padding-left: 43px;
+            font-size: 20px;
+            line-height: 30px;
+            font-weight: 700;
+
+            &:before {
+                content: '';
+                @include circle-small-label;
+                transform: translateY(-50%);
+                top: 50%;
+                left: -9px;
+            }
+        }
+
+        &__column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+            &-block {
+                display: flex;
+                position: relative;
+                justify-content: start;
+                flex-wrap: wrap;
+                align-items: start;
+                padding-left: 43px;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    z-index: -2;
+                    width: 1px;
+                    height: 100%;
+                    background: $text-color;
+                    right: 100%;
+                    transform: translateX(-100%);
+                    top: -60px;
+
+                }
+
+                &__icon {
+                    @include circle-icon;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        width: 125%;
+                        height: 1px;
+                        background: $text-color;
+                        right: 44%;
+                        transform: translateX(-44%);
+                        top: 20px;
+
+                    }
+
+                    img {
+                        display: block;
+                        align-self: flex-end;
+                    }
+                }
+
+                &__subtitle {
+                    @include small-bold-label;
+
+                    span {
+                        @include small-text;
+                    }
+                }
+
+                &__descr {
+                    margin: 12px 0 65px 0;
+                    @include small-text;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,60 @@
+.sidepanel {
+    display: flex;
+    top: 115px;
+    left: 50px;
+    flex-direction: column;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    height: 338px;
+    z-index: 3;
+
+    @media (max-width: 1300px) {
+        left: auto;
+        right: 50px;
+        height: 238px;
+    }
+
+    @media (max-width: 700px) {
+        right: 25px;
+    }
+
+    &__link {
+        display: block;
+
+        &:hover {
+            svg path {
+                fill: $main-color;
+                transition: 300ms all;
+            }
+        }
+    }
+
+    &__divider {
+        width: 2px;
+        height: 70px;
+        background-color: #000000;
+
+        @media (max-width: 700px) {
+            height: 35px;
+        }
+    }
+
+    &__text {
+        height: 150px;
+        width: 25px;
+
+        span {
+            width: 150px;
+            display: block;
+            transform: rotate(-90deg) translate(-40%, -260%);
+            @include subtitle;
+
+            @media (max-width: 700px) {
+
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+    }
+}

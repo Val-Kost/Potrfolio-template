@@ -1,0 +1,132 @@
+.skills {
+    min-height: 800px;
+    padding-top: 120px;
+
+    @media (max-width: 767px) {
+        padding-top: 70px;
+    }
+
+    &-subtitle {
+        text-align: center;
+        @include subtitle;
+        @include circle-label;
+
+        &:before {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &-title {
+        @include title;
+        text-align: center;
+        line-height: 60px;
+    }
+
+    &-divider {
+        @include short-line;
+        margin: 15px auto 0px auto;
+    }
+
+    &-wrapper {
+        margin-top: 60px;
+
+        &__block {
+            border: 1px solid $text-color;
+            max-width: 270px;
+            height: 270px;
+            padding: 30px;
+
+            &-img {
+                display: block;
+
+                &_jqwery {
+                    margin: 15px 0 33px 0;
+                }
+            }
+
+            &-title {
+                margin-top: 20px;
+                @include small-bold-label;
+                text-align: left;
+            }
+
+            &-descr {
+                margin-top: 15px;
+                @include small-text;
+                text-align: left;
+                letter-spacing: 0.1mm;
+            }
+        }
+    }
+
+    &__btn-prev,
+    &__btn-next {
+        display: block;
+        width: 31px;
+        height: 50px;
+        border: none;
+        position: absolute;
+        background-color: white;
+        top: 70%;
+        left: auto;
+        transform: translateY(-70%);
+
+        &:focus-within {
+            outline: none;
+        }
+    }
+
+    &__btn-next {
+        right: 0;
+    }
+
+    [data-action=stop] {
+        display: none;
+    }
+
+    &-bar {
+        display: grid;
+        grid-auto-columns: auto;
+        grid-auto-rows: auto;
+
+        @media (max-width:355px) {
+            padding: 0 5px 0 5px;
+        }
+
+        &__title {
+            grid-row: 1 / 2;
+            grid-column: 1 / 2;
+            justify-self: start;
+            @include small-bold-label;
+            margin-left: 14px;
+            @include circle-label;
+
+            &:before {
+                left: -12px;
+                bottom: 8px;
+            }
+        }
+
+        &__value {
+            grid-row: 1 / 2;
+            grid-column: 3 / 4;
+            justify-self: end;
+            @include small-bold-label;
+            font-weight: 500;
+        }
+
+        &__counter {
+            grid-row: 3 / 4;
+            grid-column: 1 / 4;
+            background: #E8E4DE;
+            border-radius: 5px;
+
+            &-line {
+                height: 100%;
+                background: $main-color;
+                border-radius: 5px;
+            }
+        }
+    }
+}

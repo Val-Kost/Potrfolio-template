@@ -1,0 +1,50 @@
+.hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    position: fixed;
+    padding: 14px 12px 14px 12px;
+
+    span {
+        transition: 100ms all;
+        display: block;
+        width: 30px;
+        height: 3px;
+        background: $main-color;
+
+    }
+
+    span.long {
+        width: 36px;
+    }
+
+    &.active {
+        display: none;
+
+        span {
+            transition: 100ms all;
+            display: block;
+            transform: rotate(45deg) translateX(44%);
+            display: block;
+            width: 30px;
+            height: 3px;
+            background: #000000;
+        }
+
+        span.bottom {
+            transform: rotate(-45deg) translateX(40%);
+        }
+
+        span.long {
+            display: none;
+        }
+    }
+
+}

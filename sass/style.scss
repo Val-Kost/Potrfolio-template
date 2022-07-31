@@ -1,0 +1,57 @@
+@import 'libs/bootstrap-reboot.min';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+@import 'base/mixins', 'base/variables';
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+
+    &-slider {
+        position: relative;
+
+    }
+
+    &-skills {
+        max-width: 1140px;
+        margin: 0 auto;
+        display: grid;
+        margin-top: 120px;
+        grid-template: repeat(1, 70px) / repeat(auto-fill, minmax(320px, 350px));
+        gap: 45px 30px;
+        justify-content: center;
+        grid-auto-columns: minmax(320px, 350px);
+        grid-auto-rows: 70px;
+    }
+
+}
+
+.pageup {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 99;
+    width: 50px;
+    height: 50px;
+    opacity: 0.5;
+
+    @media (max-width:535px) {
+        width: 35px;
+        height: 35px;
+    }
+
+    svg {
+        path {
+            fill: $main-color;
+        }
+    }
+}
+
+
+@import 'blocks/promo', 'blocks/side-panel', 'blocks/hamburger', 'blocks/menu', 'blocks/about-me', 'blocks/exp', 'blocks/skills', 'base/tiny-slider', 'blocks/portfolio', 'blocks/feedback';

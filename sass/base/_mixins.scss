@@ -1,0 +1,100 @@
+@mixin title {
+    font-weight: 700;
+    font-size: 36px;
+    color: $text-color;
+
+    @media (max-width: 700px) {
+        font-size: 24px;
+    }
+}
+
+@mixin subtitle {
+    position: relative;
+    font-weight: 700;
+    font-size: 16px;
+    color: $text-color;
+}
+
+@mixin small-bold-label {
+    position: relative;
+    font-weight: 700;
+    font-size: 14px;
+    color: $text-color;
+}
+
+@mixin small-text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $text-color;
+}
+
+@mixin menu-list {
+    font-weight: 700;
+    font-size: 24px;
+    color: $white-color;
+
+    @media (max-width: 1024px) {
+        font-size: 20px;
+    }
+
+    @media (max-width: 820px) {
+        font-size: 16px;
+    }
+
+    @media (max-width: 520px) {
+        font-size: 14px;
+    }
+}
+
+@mixin primery-btn {
+    display: block;
+    background: $main-color;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    font-weight: 700;
+    font-size: 14px;
+    color: $text-color;
+    height: 45px;
+}
+
+@mixin circle-icon {
+    display: flex;
+    position: relative;
+    margin-right: 14px;
+    justify-content: flex-end;
+    width: 36px;
+    height: 36px;
+    background: $main-color;
+    border-radius: 100%;
+}
+
+@mixin circle-label {
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: -1;
+        left: -1px;
+        bottom: -6px;
+        background: $main-color;
+        width: 36px;
+        height: 36px;
+        border-radius: 100%;
+    }
+}
+
+@mixin circle-small-label {
+    position: absolute;
+    z-index: -1;
+    background: $main-color;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+}
+
+@mixin short-line {
+    width: 60px;
+    height: 3px;
+    background: $main-color;
+}

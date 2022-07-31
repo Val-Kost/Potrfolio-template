@@ -1,0 +1,72 @@
+.promo {
+    background: $main-color url('../img/main_bg.jpg') center (center / cover) no-repeat;
+    min-height: 40vh;
+
+    &__subtitle {
+        padding-top: 206px;
+        padding-left: 10px;
+        width: 280px;
+        z-index: 1;
+        @include subtitle;
+        @include circle-label;
+
+        @media (max-width: 350px) {
+            font-size: 14px;
+            width: 230px;
+
+        }
+    }
+
+    &__title {
+        margin-top: 9px;
+        width: 535px;
+        @include title;
+        font-size: 48px;
+
+        @media (max-width: 700px) {
+            width: 300px;
+
+        }
+    }
+
+    &__btns {
+        margin-top: 25px;
+        width: 300px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &__btn {
+        @include primery-btn;
+        margin-left: 0;
+        min-width: 135px;
+        padding: 12px 25px;
+        transition: 500ms ease-in-out;
+
+        &:hover {
+            text-decoration: none;
+            color: $text-color;
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.45);
+        }
+    }
+
+    &__about {
+        display: block;
+        margin-left: 19px;
+        transition: 500ms ease-in-out;
+        @include small-bold-label;
+
+        &:hover {
+            text-decoration: none;
+            color: $main-color;
+        }
+
+        & div {
+            width: 135px;
+            height: 45px;
+            padding: 12px 25px;
+            text-align: center;
+        }
+    }
+}
